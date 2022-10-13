@@ -1,0 +1,92 @@
+{% extends 'service/base.html' %}
+
+
+{% block content %}
+
+<main class="px-3">
+    <h1>Result</h1>
+    <img src="/media/foto.jpg" alt="" width="50%">
+    <div class="mt-2">
+        <table class="table text-white table-bordered">
+            <thead>
+                <tr>
+                    <th>af</th>
+                    <th>hr</th>
+                    <th>hc</th>
+                    <th>re</th>
+                    <th>qp</th>
+                    <th>ql</th>
+                    <th>ss</th>
+                    <th>sc</th>
+                    <th>si</th>
+                    <th>sn</th>
+                    <th>sl</th>
+                    <th>qi</th>
+                    <th>qc</th>
+                    <th>tw</th>
+                    <th>tl</th>
+                    <th>td</th>
+                    <th>vs</th>
+                    <th>ae</th>
+                    <th>js</th>
+                    <th>uw</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{cnndata.af}}</td>
+                    <td>{{cnndata.hr|floatformat:-2}}</td>
+                    <td>{{cnndata.hc}}</td>
+                    <td>{{cnndata.re}}</td>
+                    <td>{{cnndata.qp}}</td>
+                    <td>{{cnndata.ql}}</td>
+                    <td>{{cnndata.ss}}</td>
+                    <td>{{cnndata.sc}}</td>
+                    <td>{{cnndata.si}}</td>
+                    <td>{{cnndata.sn}}</td>
+                    <td>{{cnndata.sl}}</td>
+                    <td>{{cnndata.qi|floatformat:-2}}</td>
+                    <td>{{cnndata.qc|floatformat:-2}}</td>
+                    <td>{{cnndata.tw}}</td>
+                    <td>{{cnndata.tl}}</td>
+                    <td>{{cnndata.td|floatformat:-2}}</td>
+                    <td>{{cnndata.vs}}</td>
+                    <td>{{cnndata.ae}}</td>
+                    <td>{{cnndata.js}}</td>
+                    <td>{{cnndata.uw}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table text-white table-bordered">
+            <thead>
+                <tr>
+                    <th>si</th>
+                    <th>ta</th>
+                    <th>br</th>
+                    <th>lv</th>
+                    <th>qr</th>
+                    <th>lt</th>
+                    <th>st</th>
+                    <th>be</th>
+                    <th>tx</th>
+                    <th>ec</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{anndata.si}}</td>
+                    <td>{{anndata.ta}}</td>
+                    <td>{{anndata.br}}</td>
+                    <td>{{anndata.lv}}</td>
+                    <td>{{anndata.qr}}</td>
+                    <td>{{anndata.lt}}</td>
+                    <td>{{anndata.st}}</td>
+                    <td>{{anndata.be}}</td>
+                    <td>{{anndata.tx}}</td>
+                    <td>{{anndata.ec}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'service/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main class="px-3">
+    <h1>Upload ECG Image</h1>
+    <iframe src="{% static 'service/pdf/ekg_1.pdf' %}" height="500" width="50%" type="" id="show_pdf"></iframe>
+
+    <form action="{% url 'predict' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="citra" id="citra" onchange="upload_img(this);">
+        <button class="btn btn-sm btn-secondary fw-bold border-white bg-white text-dark"
+            type="submit">Predict</button>
+    </form>
+</main>
+{% endblock content %}
